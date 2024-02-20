@@ -1,23 +1,22 @@
 //this replaces the for loop in the picture
-		int amount = 3; //amout of numbers to check
-		int numbers[] = {3, 5, 7};
-		String words[] = {"Fizz", "Buzz", "Jazz"};
-		String output = "";
-		boolean IsDivisible = false;
+int amount = 3; //amout of numbers to check
+int numbers[] = {3, 5, 7};
+String words[] = {"Fizz", "Buzz", "Jazz"};
+String output = "";
+boolean IsDivisible = false;
 		
-		for(int i = 1 ; i <= n ; i++)
+for(int i = 1 ; i <= n ; i++)
+{
+	for(int o = 0 ; o < amount ; o++)
+	{
+		if(i % numbers[o] == 0)
 		{
-		    for(int o = 0 ; o < amount ; o++)
-		    {
-		        if(i % numbers[o] == 0)
-		        {
-		            output += words[o];
-		            IsDivisible = true;
-		        }
-		    }
-		    if(!IsDivisible) output = Integer.toString(i);
-		    result.add(output);
-		    //System.out.println(output);
-		    output = "";
-		    IsDivisible = false;
+			output += words[o];
+		        IsDivisible = true;
 		}
+	}
+	if(!IsDivisible) output = Integer.toString(i);
+	result.add(output);
+	output = "";
+	IsDivisible = false;
+}
